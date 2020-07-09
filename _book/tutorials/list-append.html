@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Python List Append · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../articles/" />
+    
+    
+    <link rel="prev" href="lambda-expressions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Use headings to create page groups like this one​</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="lambda-expressions.html">
+            
+                <a href="lambda-expressions.html">
+            
+                    
+                    Lambda Expressions in Python.
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="list-append.html">
+            
+                <a href="list-append.html">
+            
+                    
+                    Python List Append
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../articles/">
+            
+                <a href="../articles/">
+            
+                    
+                    Articles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="virtual-environments.html">
+            
+                <a href="virtual-environments.html">
+            
+                    
+                    Python Virtual Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part2/page2-2.md">
+            
+                <span>
+            
+                    
+                    Some other child page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">A second-page group​</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../another-page.md">
+            
+                <span>
+            
+                    
+                    Yet another page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Python List Append</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/Image---Append-vs-Extend-1.png" alt="Python List Append VS Python List Extend &#x2013; The Difference Explained with Array Method Examples"></p>
+<h2 id="&#x1F44B;-welcome">&#x1F44B; Welcome</h2>
+<p>If you want to learn how to work with  <code>.append()</code>  and  <code>.extend()</code>  and understand their differences, then you have come to the right place. They are powerful list methods that you will definitely use in your Python projects.</p>
+<p>In this article, you will learn:</p>
+<ul>
+<li>How and when to use the  <code>.append()</code>  method.</li>
+<li>How and when to use the  <code>.extend()</code>  method.</li>
+<li>Their main differences.</li>
+</ul>
+<p>Let&apos;s begin &#x1F505;</p>
+<h2 id="&#x1F538;-append">&#x1F538; Append</h2>
+<p>Let&apos;s see how the  <code>.append()</code>  method works behind the scenes.</p>
+<h3 id="use-cases">Use Cases</h3>
+<p>You should use this method when you want to  <strong>add a single item to the end</strong>  of a list.</p>
+<p>&#x1F4A1; <strong>Tips:</strong> You can add items of any data type since lists can have elements of different data types.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-105.png" alt=""></p>
+<h3 id="syntax-and-arguments">Syntax and Arguments</h3>
+<p>To call the  <code>.append()</code>  method, you will need to use this syntax:</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-104.png" alt=""></p>
+<p><strong>From Left to Right:</strong></p>
+<ul>
+<li>The list that will be modified. This is usually a variable that references a list.</li>
+<li>A dot, followed by the name of the method  <code>.append()</code>.</li>
+<li>Within parentheses, the item that will be added to the end of the list.</li>
+</ul>
+<p>&#x1F4A1;  <strong>Tips:</strong> The dot is very important. This is called &quot;dot notation&quot;. The dot basically says &quot;call this method on this particular list&quot;, so the effect of the method will be applied to the list that is located before the dot.</p>
+<h3 id="examples">Examples</h3>
+<p>Here&apos;s an example of how to use  <code>.append()</code>:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Define the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Add the integer 5 to the end of the existing list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># See the updated value of the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+</code></pre>
+<p>&#x1F4A1;  <strong>Tips:</strong>  When you use  <code>.append()</code>  the original list is modified. The method does not create a copy of the list &#x2013; it mutates the original list in memory.</p>
+<p>Let&apos;s pretend that we are conducting a research and that we want to analyze the data collected using Python. We need to add a new measurement to the existing list of values.</p>
+<p>How do we do it? We use the  <code>.append()</code>  method!</p>
+<p>You can see it right here:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Existing list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+
+<span class="hljs-comment"># Add the float (decimal number) to the end of the existing list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">7.34</span>)
+
+<span class="hljs-comment"># See the updated value of the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">7.34</span>]
+</code></pre>
+<h3 id="equivalent-to">Equivalent to...</h3>
+<p>If you are familiar with string, list, or tuple slicing, what  <code>.append()</code>  really does behind the scenes is equivalent to:</p>
+<pre><code class="lang-python">a[len(a):] = [x]
+</code></pre>
+<p>With this example, you can see that they are equivalent.</p>
+<p>Using  <code>.append()</code>:</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">4.52</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">4.52</span>]
+</code></pre>
+<p>Using list slicing:</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums[len(nums):] = [<span class="hljs-number">4.52</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">4.52</span>]
+</code></pre>
+<h3 id="appending-a-sequence">Appending a Sequence</h3>
+<p>Now, what do you think about this example? What do you think will be output?</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append([<span class="hljs-number">5.67</span>, <span class="hljs-number">7.67</span>, <span class="hljs-number">3.44</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+<span class="hljs-comment"># OUTPUT?</span>
+</code></pre>
+<p>Are you ready? This will be the output:</p>
+<pre><code class="lang-python">[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, [<span class="hljs-number">5.67</span>, <span class="hljs-number">7.67</span>, <span class="hljs-number">3.44</span>]]
+</code></pre>
+<p>You might be asking, why was the full list added as a single item? It&apos;s because the  <code>.append()</code>  method adds the entire item to the end of the list. If the item is a sequence such as a list, dictionary, or tuple, the entire sequence will be added as a single item of the existing list.</p>
+<p>Here we have another example (below). In this case, the item is a tuple and it is added as a single item of the list, not as individual items:</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>names = [<span class="hljs-string">&quot;Lulu&quot;</span>, <span class="hljs-string">&quot;Nora&quot;</span>, <span class="hljs-string">&quot;Gino&quot;</span>, <span class="hljs-string">&quot;Bryan&quot;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>names.append((<span class="hljs-string">&quot;Emily&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>names
+[<span class="hljs-string">&apos;Lulu&apos;</span>, <span class="hljs-string">&apos;Nora&apos;</span>, <span class="hljs-string">&apos;Gino&apos;</span>, <span class="hljs-string">&apos;Bryan&apos;</span>, (<span class="hljs-string">&apos;Emily&apos;</span>, <span class="hljs-string">&apos;John&apos;</span>)]
+</code></pre>
+<h2 id="&#x1F538;-extend">&#x1F538; Extend</h2>
+<p>Now let&apos;s dive into the functionality of the  <code>.extend()</code>  method.</p>
+<h3 id="use-cases">Use Cases</h3>
+<p>You should use this method if you need to  <strong>append several items to a list as individual items</strong>.</p>
+<p>Let me illustrate the importance of this method with a familiar friend that you just learned: the  <code>.append()</code>  method. Based on what you&apos;ve learned so far, if we wanted to add several  <strong>individual</strong> items to a list using  <code>.append()</code>, we would need to use  <code>.append()</code>  several times, like this:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that we want to modify</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+
+<span class="hljs-comment"># Appending the items</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">2.3</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">9.6</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">4.564</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.append(<span class="hljs-number">7.56</span>)
+
+<span class="hljs-comment"># Updated list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">9.6</span>, <span class="hljs-number">4.564</span>, <span class="hljs-number">7.56</span>]
+</code></pre>
+<p>I&apos;m sure that you are probably thinking that this would not be very efficient, right? What if I need to add thousands or millions of values? I cannot write thousands or millions of lines for this simple task. That would take forever!</p>
+<p>So let&apos;s see an alternative. We can store the values that we want to add in a separate list and then use a for loop to call  <code>.append()</code>  as many times as needed:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that we want to modify</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+
+<span class="hljs-comment"># Values that we want to add</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>new_values = [<span class="hljs-number">2.3</span>, <span class="hljs-number">9.6</span>, <span class="hljs-number">4.564</span>, <span class="hljs-number">7.56</span>]
+
+<span class="hljs-comment"># For loop that is going to append the value</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> new_values:
+    nums.append(num)
+
+<span class="hljs-comment"># Updated value of the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">9.6</span>, <span class="hljs-number">4.564</span>, <span class="hljs-number">7.56</span>]
+</code></pre>
+<p>This is more efficient, right? We are only writing a few lines. But there is an even more efficient, readable, and compact way to achieve the same purpose:  <code>.extend()</code>!</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>nums = [<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>new_values = [<span class="hljs-number">2.3</span>, <span class="hljs-number">9.6</span>, <span class="hljs-number">4.564</span>, <span class="hljs-number">7.56</span>]
+
+<span class="hljs-comment"># This is where the magic occurs! No more for loops</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums.extend(new_values)
+
+<span class="hljs-comment"># The list was updated with individual values</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>nums
+[<span class="hljs-number">5.6</span>, <span class="hljs-number">7.44</span>, <span class="hljs-number">6.75</span>, <span class="hljs-number">4.56</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">9.6</span>, <span class="hljs-number">4.564</span>, <span class="hljs-number">7.56</span>]
+</code></pre>
+<p>Let&apos;s see how this method works behind the scenes.</p>
+<h3 id="syntax-and-arguments">Syntax and Arguments</h3>
+<p>To call the  <code>.extend()</code>  method, you will need to use this syntax:</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-110.png" alt=""></p>
+<p><strong>From Left to Right:</strong></p>
+<ul>
+<li>The list that will be modified. This is usually a variable that refers to the list.</li>
+<li>A dot  <code>.</code>  (So far, everything is exactly the same as before).</li>
+<li>The name of the method  <code>extend</code>. (Now things start to change...).</li>
+<li>Within parentheses, an  <strong>iterable</strong> (list, tuple, dictionary, set, or string) that contains the items that will be added as individual elements of the list.</li>
+</ul>
+<p>&#x1F4A1; <strong>Tips:</strong>  According to the  <a href="https://docs.python.org/3/glossary.html" target="_blank">Python documentation</a>, an iterable is defined as &quot;an object capable of returning its members one at a time&quot;. Iterables can be used in a for loop and because they return their elements one at a time, we can &quot;do something&quot; with each one of them, one per iteration.</p>
+<h3 id="behind-the-scenes">Behind the Scenes</h3>
+<p>Let&apos;s see how  <code>.extend()</code>  works behind the scenes. Here we have an example:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be modified</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Sequence of values that we want to add to the list a</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+<span class="hljs-comment"># Calling .extend()</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(b)
+
+<span class="hljs-comment"># See the updated list. Now the list a has the values 5, 6, and 7</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+</code></pre>
+<p>You can think of  <code>.extend()</code>  as a method that appends the individual elements of the iterable in the same order as they appear.</p>
+<p>In this case, we have a list  <code>a = [1, 2, 3, 4]</code>  as illustrated in the diagram below. We also have a list  <code>b = [5, 6, 7]</code>  that contains the sequence of values that we want to add. The method takes each element of  <code>b</code>  and appends it to list  <code>a</code>  in the same order.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-106.png" alt=""></p>
+<p>Step 1. First element is appended.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-107.png" alt=""></p>
+<p>Step 2. Second element appended.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-108.png" alt=""></p>
+<p>Step 3. Third element appended</p>
+<p>After this process is completed, we have the updated list  <code>a</code>  and we can work with the values as individual elements of  <code>a</code>.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2020/03/image-109.png" alt=""></p>
+<p>&#x1F4A1;  <strong>Tips:</strong>  The list  <code>b</code>  used to extend list  <code>a</code>  remains intact after this process. You can work with it after the call to  <code>.extend()</code>. Here is the proof:</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(b)
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+<span class="hljs-comment"># List b is intact!</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b
+[<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+</code></pre>
+<h3 id="examples">Examples</h3>
+<p>You may be curious to know how the  <code>.extend()</code>  method works when you pass different types of iterables. Let&apos;s see how in the following examples:</p>
+<p><strong>For tuples:</strong><br>The process works exactly the same if you pass a tuple. The individual elements of the tuple are appended one by one in the order that they appear.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be extended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Values that will be added (the iterable is a tuple!)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+
+<span class="hljs-comment"># Method call</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(b)
+
+<span class="hljs-comment"># The value of the list a was updated</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+</code></pre>
+<p><strong>For sets:</strong><br>The same occurs if you pass a set. The elements of the set are appended one by one.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be extended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Values that will be appended (the iterable is a set!)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>c = {<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>}
+
+<span class="hljs-comment"># Method call</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(c)
+
+<span class="hljs-comment"># The value of a was updated</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+</code></pre>
+<p><strong>For strings:</strong><br>Strings work a little bit different with the  <code>.extend()</code>  method. Each character of the string is considered an &quot;item&quot;, so the characters are appended one by one in the order that they appear in the string.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be extended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>]
+
+<span class="hljs-comment"># String that will be used to extend the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = <span class="hljs-string">&quot;Hello, World!&quot;</span>
+
+<span class="hljs-comment"># Method call</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(b)
+
+<span class="hljs-comment"># The value of a was updated</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;H&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;,&apos;</span>, <span class="hljs-string">&apos; &apos;</span>, <span class="hljs-string">&apos;W&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, <span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;!&apos;</span>]
+</code></pre>
+<p><strong>For dictionaries:</strong><br>Dictionaries have a particular behavior when you pass them as arguments to  <code>.extend()</code>. In this case, the  <strong>keys</strong> of the dictionary are appended one by one. The values of the corresponding key-value pairs are not appended.</p>
+<p>In this example (below), the keys are &quot;d&quot;, &quot;e&quot;, and &quot;f&quot;. These values are appended to the list  <code>a</code>.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be extended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>]
+
+<span class="hljs-comment"># Dictionary that will be used to extend the list</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = {<span class="hljs-string">&quot;d&quot;</span>: <span class="hljs-number">5</span>, <span class="hljs-string">&quot;e&quot;</span>: <span class="hljs-number">6</span>, <span class="hljs-string">&quot;f&quot;</span>: <span class="hljs-number">7</span>}
+
+<span class="hljs-comment"># Method call</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a.extend(b)
+
+<span class="hljs-comment"># The value of a was updated</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;e&apos;</span>, <span class="hljs-string">&apos;f&apos;</span>]
+</code></pre>
+<h3 id="equivalent-to">Equivalent to...</h3>
+<p>What  <code>.extend()</code>  does is equivalent to  <code>a[len(a):] = iterable</code>. Here we have an example to illustrate that they are equivalent:</p>
+<p>Using  <code>.extend()</code>:</p>
+<pre><code># List that will be extended
+&gt;&gt;&gt; a = [1, 2, 3, 4]
+
+# Values that will be appended
+&gt;&gt;&gt; b = (6, 7, 8)
+
+# Method call
+&gt;&gt;&gt; a.extend(b)
+
+# The list was updated
+&gt;&gt;&gt; a
+[1, 2, 3, 4, 6, 7, 8]
+</code></pre><p>Using list slicing:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># List that will be extended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-comment"># Values that will be appended</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = (<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>)
+
+<span class="hljs-comment"># Assignment statement. Assign the iterable b as the final portion of the list a</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a[len(a):] = b
+
+<span class="hljs-comment"># The value of a was updated</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
+</code></pre>
+<p>The result is the same, but using  <code>.extend()</code>  is much more readable and compact, right? Python truly offers amazing tools to improve our workflow.</p>
+<h2 id="&#x1F538;-summary-of-their-differences">&#x1F538; Summary of their Differences</h2>
+<p>Now that you know how to work with  <code>.append()</code>  and  <code>.extend()</code>, let&apos;s see a summary of their key differences:</p>
+<ul>
+<li><strong>Effect</strong>:  <code>.append()</code>  adds a single element to the end of the list while  <code>.extend()</code>  can add multiple individual elements to the end of the list.</li>
+<li><strong>Argument</strong>:  <code>.append()</code>  takes a single element as argument while  <code>.extend()</code>  takes an iterable as argument (list, tuple, dictionaries, sets, strings).</li>
+</ul>
+<p><strong>I really hope that you liked my article and found it helpful.</strong> Now you can work with  <code>.append()</code>  and  <code>.extend()</code>  in your Python projects.  <a href="https://www.udemy.com/user/estefania-cn/" target="_blank">Check out my online courses</a>. Follow me on  <a href="https://twitter.com/EstefaniaCassN" target="_blank">Twitter</a>. &#x1F44D;</p>
+<p>Reference : <a href="https://www.freecodecamp.org/news/python-list-append-vs-python-list-extend/" target="_blank">freeCodeCamp</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lambda-expressions.html" class="navigation navigation-prev " aria-label="Previous page: Lambda Expressions in Python.">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../articles/" class="navigation navigation-next " aria-label="Next page: Articles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"draft":false,"summary":"Python List Append VS Python List Extend – The Difference Explained with Array Method Examples","authors":["admin"],"lastMod":"2020-03-22T00:00:00Z","featured":false,"date":"2020-03-22T00:00:00Z","subtitle":"The Difference Explained with Array Method Examples","title":"Python List Append","tags":["Beginner","freeCodeCamp","List"],"categories":["Tutorials","Python"],"level":"1.2.2","depth":2,"next":{"title":"Articles","level":"1.3","depth":1,"path":"articles/README.md","ref":"articles/README.md","articles":[{"title":"Python Virtual Environments","level":"1.3.1","depth":2,"path":"tutorials/virtual-environments.md","ref":"tutorials/virtual-environments.md","articles":[]},{"title":"Some other child page","level":"1.3.2","depth":2,"path":"part2/page2-2.md","ref":"part2/page2-2.md","articles":[]}]},"previous":{"title":"Lambda Expressions in Python.","level":"1.2.1","depth":2,"path":"tutorials/lambda-expressions.md","ref":"tutorials/lambda-expressions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials/list-append.md","mtime":"2020-06-15T19:25:15.649Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2020-07-09T17:46:06.614Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

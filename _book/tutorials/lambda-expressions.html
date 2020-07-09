@@ -1,0 +1,406 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Lambda Expressions in Python. · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="list-append.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Use headings to create page groups like this one​</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="lambda-expressions.html">
+            
+                <a href="lambda-expressions.html">
+            
+                    
+                    Lambda Expressions in Python.
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="list-append.html">
+            
+                <a href="list-append.html">
+            
+                    
+                    Python List Append
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../articles/">
+            
+                <a href="../articles/">
+            
+                    
+                    Articles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="virtual-environments.html">
+            
+                <a href="virtual-environments.html">
+            
+                    
+                    Python Virtual Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part2/page2-2.md">
+            
+                <span>
+            
+                    
+                    Some other child page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">A second-page group​</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../another-page.md">
+            
+                <span>
+            
+                    
+                    Yet another page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Lambda Expressions in Python.</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="featured.jpg" alt="Lambda Expressions in Python"></p>
+<h2 id="lambda-expressions"><strong>Lambda Expressions</strong></h2>
+<p>Lambda Expressions are ideally used when we need to do something simple and are more interested in getting the job done quickly rather than formally naming the function. Lambda expressions are also known as anonymous functions.</p>
+<p>Lambda Expressions in Python are a short way to declare small and anonymous functions (it is not necessary to provide a name for lambda functions).</p>
+<p>Lambda functions behave just like regular functions declared with the  <code>def</code>  keyword. They come in handy when you want to define a small function in a concise way. They can contain only one expression, so they are not best suited for functions with control-flow statements.</p>
+<h3 id="syntax-of-a-lambda-function">Syntax of a Lambda Function</h3>
+<p><code>lambda arguments: expression</code></p>
+<p>Lambda functions can have any number of arguments but only one expression.</p>
+<h3 id="example-code">Example code</h3>
+<pre><code class="lang-py"><span class="hljs-comment"># Lambda function to calculate square of a number</span>
+square = <span class="hljs-keyword">lambda</span> x: x ** <span class="hljs-number">2</span>
+print(square(<span class="hljs-number">3</span>)) <span class="hljs-comment"># Output: 9</span>
+
+<span class="hljs-comment"># Traditional function to calculate square of a number</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square1</span><span class="hljs-params">(num)</span>:</span>
+  <span class="hljs-keyword">return</span> num ** <span class="hljs-number">2</span>
+print(square(<span class="hljs-number">5</span>)) <span class="hljs-comment"># Output: 25</span>
+</code></pre>
+<p>In the above lambda example,  <code>lambda x: x ** 2</code>  yields an anonymous function object which can be associated with any name. So, we associated the function object with  <code>square</code>. So from now on we can call the  <code>square</code>  object like any traditional function, for example  <code>square(10)</code></p>
+<h2 id="examples-of-lambda-functions"><strong>Examples of lambda functions</strong></h2>
+<h3 id="beginner"><strong>Beginner</strong></h3>
+<pre><code class="lang-py">lambda_func = <span class="hljs-keyword">lambda</span> x: x**<span class="hljs-number">2</span> <span class="hljs-comment"># Function that takes an integer and returns its square</span>
+lambda_func(<span class="hljs-number">3</span>) <span class="hljs-comment"># Returns 9</span>
+</code></pre>
+<h3 id="intermediate"><strong>Intermediate</strong></h3>
+<pre><code class="lang-py">lambda_func = <span class="hljs-keyword">lambda</span> x: <span class="hljs-keyword">True</span> <span class="hljs-keyword">if</span> x**<span class="hljs-number">2</span> &gt;= <span class="hljs-number">10</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">False</span>
+lambda_func(<span class="hljs-number">3</span>) <span class="hljs-comment"># Returns False</span>
+lambda_func(<span class="hljs-number">4</span>) <span class="hljs-comment"># Returns True</span>
+</code></pre>
+<h3 id="complex"><strong>Complex</strong></h3>
+<pre><code class="lang-py">my_dict = {<span class="hljs-string">&quot;A&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&quot;C&quot;</span>: <span class="hljs-number">3</span>}
+sorted(my_dict, key=<span class="hljs-keyword">lambda</span> x: my_dict[x]%<span class="hljs-number">3</span>) <span class="hljs-comment"># Returns [&apos;C&apos;, &apos;A&apos;, &apos;B&apos;]</span>
+</code></pre>
+<h2 id="use-case">Use-case</h2>
+<p>Let&#x2019;s say you want to filter out odd numbers from a  <code>list</code>. You could use a  <code>for</code>  loop:</p>
+<pre><code class="lang-python">my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
+filtered = []
+
+<span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> my_list:
+     <span class="hljs-keyword">if</span> num % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>:
+         filtered.append(num)
+
+print(filtered)      <span class="hljs-comment"># Python 2: print filtered</span>
+<span class="hljs-comment"># [1, 3, 5, 7, 9]</span>
+</code></pre>
+<p>Or you could write this as a one liner with list-comprehensions:</p>
+<pre><code class="lang-python">filtered = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>] <span class="hljs-keyword">if</span> x % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>]
+</code></pre>
+<p>But you might be tempted to use the built-in  <code>filter</code>  function. Why? The first example is a bit too verbose and the one-liner can be harder to understand. But  <code>filter</code>  offers the best of both words. What is more, the built-in functions are usually faster.</p>
+<pre><code class="lang-python">my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>]
+
+filtered = filter(<span class="hljs-keyword">lambda</span> x: x % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>, my_list)
+
+list(filtered)
+<span class="hljs-comment"># [1, 3, 5, 7, 9]</span>
+</code></pre>
+<p>NOTE: in Python 3 built in functions return generator objects, so you have to call  <code>list</code>. In Python 2, on the other hand, they return a  <code>list</code>,  <code>tuple</code>or  <code>string</code>.</p>
+<p>So what happened? You told  <code>filter</code>  to take each element in  <code>my_list</code>  and apply the lambda expressions. The values that return  <code>False</code>  are filtered out.</p>
+<h4 id="more-information"><strong>More Information:</strong></h4>
+<ul>
+<li><a href="https://docs.python.org/3/reference/expressions.html#lambda" target="_blank">Official Docs</a></li>
+</ul>
+<blockquote>
+<p>Reference : <a href="https://www.freecodecamp.org/news/lambda-expressions-in-python/" target="_blank">freeCodeCamp</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Tutorials">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="list-append.html" class="navigation navigation-next " aria-label="Next page: Python List Append">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"draft":false,"summary":"Lambda Expressions are ideally used when we need to do something simple and are more interested in getting the job done quickly rather than formally naming the function. Lambda expressions are also known as anonymous functions.","authors":["admin"],"lastMod":"2020-01-04T00:00:00Z","featured":false,"date":"2020-01-04T00:00:00Z","subtitle":"Lambda Expressions are ideally used when we need to do something simple and are more interested in getting the job done quickly rather than formally naming the function. Lambda expressions are also known as anonymous functions.","title":"Lambda Expressions in Python.","tags":["Lambda Expressions"],"image":{"caption":"","focal_point":"","preview_only":true},"categories":["Tutorials","Python"],"level":"1.2.1","depth":2,"next":{"title":"Python List Append","level":"1.2.2","depth":2,"path":"tutorials/list-append.md","ref":"tutorials/list-append.md","articles":[]},"previous":{"title":"Tutorials","level":"1.2","depth":1,"path":"tutorials/README.md","ref":"tutorials/README.md","articles":[{"title":"Lambda Expressions in Python.","level":"1.2.1","depth":2,"path":"tutorials/lambda-expressions.md","ref":"tutorials/lambda-expressions.md","articles":[]},{"title":"Python List Append","level":"1.2.2","depth":2,"path":"tutorials/list-append.md","ref":"tutorials/list-append.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials/lambda-expressions.md","mtime":"2020-06-15T19:25:15.673Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2020-07-09T17:46:06.614Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
